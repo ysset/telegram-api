@@ -1,0 +1,11 @@
+# Hashes of file build rules.
+4dbe182d33eb5b437c1eaf423fa90682 ../tdutils/generate/auto/extension_to_mime_type.cpp
+57dea82b68f9b7ba602e49a67aec95a5 ../tdutils/generate/auto/mime_type_to_extension.cpp
+5600527b5ff99aea8361cb8dfbbae096 ../tdutils/generate/auto/mime_type_to_extension.gperf
+d8fe38ba37ba5d3174ff665679de1b53 CMakeFiles/git_commit
+e23710687e056855ada30defac90cc64 CMakeFiles/prepare_cross_compiling
+17c0475746137aa208bfe17cdb228759 td/generate/CMakeFiles/tl_generate_c
+dc2b6b1c912d3b2c0f55b973da54af8f td/generate/CMakeFiles/tl_generate_common
+de30efe9ae95a3118557a0475927176a td/generate/CMakeFiles/tl_generate_json
+9c95af66fb0ef3f9d25e1a7d1818296c td/generate/CMakeFiles/tl_generate_tlo
+41bd374e3fcd3443ef3fe3fc3de2e33f tdutils/generate/CMakeFiles/tdmime_auto
