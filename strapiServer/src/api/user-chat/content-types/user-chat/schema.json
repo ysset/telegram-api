@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_chats",
+  "info": {
+    "singularName": "user-chat",
+    "pluralName": "user-chats",
+    "displayName": "user-chat",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "telegram_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::telegram-user.telegram-user",
+      "inversedBy": "user_chats"
+    }
+  }
+}

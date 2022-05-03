@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "telegram_users",
+  "info": {
+    "singularName": "telegram-user",
+    "pluralName": "telegram-users",
+    "displayName": "telegram-user"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "telegramId": {
+      "type": "biginteger"
+    },
+    "user_chats": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::user-chat.user-chat",
+      "inversedBy": "telegram_users"
+    }
+  }
+}
