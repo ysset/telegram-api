@@ -6,7 +6,7 @@ module.exports = async (strapi) => {
     const api = me.airgram.api;
     strapi.telegramApi = api;
     const { response: chats } = await api.getChats({
-      limit: 10,
+      limit: 1,
       offsetChatId: 0,
       offsetOrder: '9223372036854775807'
     });

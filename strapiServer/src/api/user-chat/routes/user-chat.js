@@ -9,7 +9,7 @@ const { createCoreRouter } = require('@strapi/strapi').factories;
 module.exports = {
     routes: [
         {
-            method: 'GET',
+            method: 'POST',
             path: '/create/flatchat',
             handler: 'user-chat.createFlatChat',
         }

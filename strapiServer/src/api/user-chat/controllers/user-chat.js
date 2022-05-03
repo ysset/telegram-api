@@ -2,15 +2,17 @@
 const { createCoreController } = require('@strapi/strapi').factories;
 
 module.exports = createCoreController('api::user-chat.user-chat', ({ strapi }) => ({
-    createFlatChat: async () => {
+    createFlatChat: async (ctx) => {
+        console.log(ctx.request.body);
+        const { title, description, userId } = ctx.request.body;
         const api = strapi.telegramApi;
-        const chat = await api.createNewSupergroupChat({title: 'TEST', isChannel: false, description: 'Test Chat'})
+        const chat = await api.createNewSupergroupChat({ title, isChannel: false, description })
+        console.log(chat);
         const addedUser = await api.addChatMember({
             chatId: chat.response.id,
-            userId: 579983619,
+            userId,
             forwardLimit: 0,
         });
-        console.log(chat);
-        console.log(addedUser);
+        return addedUser.response;
     },
 }));
